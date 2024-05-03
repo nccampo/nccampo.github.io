@@ -1,0 +1,53 @@
+/* EXTERNAL STYLESHEET FOR SHOPPING CART COLUMN */
+
+.main-content {
+    display: flex; /* usage of flexbox to allow the shopping cart and catalog to be viewed side by side */
+    margin: 20px;
+}
+/* overall container for the shopping cart */
+.shopping-cart {
+    width: 30%; /* occupies one-third of the page */
+    background-color: #bfbfbf; /* gray background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    float: right; /* positions to the right */
+  }
+  
+  /* heading for the shopping cart */
+  .shopping-cart h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* individual cart items */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* item name */
+  .cart-item span {
+    flex-grow: 1;
+  }
+
+
+  
+  /* right-aligned quantity and delete button */
+  .cart-item button {
+    background-color: maroon;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cart-item button:hover {
+    background-color: #800000; /* Darker maroon on hover */
+  }
+  

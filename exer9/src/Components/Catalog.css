@@ -1,0 +1,75 @@
+/* STYLESHEET FOR THE MENU ITEMS */
+
+/* Catalog container (left side) */
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* align items to the left */
+    padding: 20px;
+    width: 70%; /* width of the catalog that takes up 70% of the screen */
+  }
+  
+  
+  .catalog-item {
+    width: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-inline-start: 100px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .catalog-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .item-details {
+    padding: 10px;
+  }
+  
+  .item-details p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .item-details button {
+    display: block;
+    margin: 0 auto;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .item-details button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* shopping cart on the right side */
+  .shopping-cart {
+    width: 30%; /* takes up 70% of the screen */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
