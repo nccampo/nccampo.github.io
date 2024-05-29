@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 
 // Ensure that the books.txt file exists
-fs.access(BOOKS_FILE_PATH, fs.constants.F_OK, (err) => {
+fs.access('books.txt', fs.constants.F_OK, (err) => {
     if (err) {
         fs.writeFileSync('books.txt', ''); // creates an empty file if it doesn't exist
     }
@@ -26,7 +26,7 @@ app.post('/add-book', (req, res) => {
 
     const bookDetails = `${name},${isbn},${author},${year}\n`;
 
-    fs.appendFile(BOOKS_FILE_PATH, bookDetails, (err) => {
+    fs.appendFile('books.txt', bookDetails, (err) => {
         if (err) {
             console.error(err);
             return res.json({ success: false });
@@ -41,7 +41,7 @@ app.post('/add-book', (req, res) => {
 app.get('/find-by-isbn-author', (req, res) => {
     const { isbn, author } = req.query;
 
-    fs.readFile(BOOKS_FILE_PATH, 'utf8', (err, data) => {
+    fs.readFile('books.txt', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.sendStatus(500);
@@ -68,7 +68,7 @@ app.get('/find-by-isbn-author', (req, res) => {
 app.get('/find-by-author', (req, res) => {
     const { author } = req.query;
 
-    fs.readFile(BOOKS_FILE_PATH, 'utf8', (err, data) => {
+    fs.readFile('books.txt', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             return res.sendStatus(500);
@@ -93,6 +93,6 @@ app.get('/find-by-author', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
+app.listen(3000, () => {
     console.log(`Server is running on port 3000`);
 });
